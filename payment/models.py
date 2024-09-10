@@ -9,7 +9,8 @@ class Payment(models.Model):
 
     sender = models.CharField(max_length=255)
     receiver = models.CharField(max_length=255)
-    amount = models.DecimalField(max_digits=18, decimal_places=18)
+    amount = models.DecimalField(verbose_name= "AMOUNT (ETH)",max_digits=18, decimal_places=18)
+    amount_ngn = models.IntegerField( verbose_name="AMOUNT (NGN)")
     timestamp = models.DateTimeField(auto_now_add=True)
     matric = models.CharField(max_length=50)
     gmail = models.EmailField()

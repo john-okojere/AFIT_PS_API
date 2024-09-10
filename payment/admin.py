@@ -6,7 +6,7 @@ class AdminAdmin(admin.ModelAdmin):
     search_fields = ('wallet_address',)
 
 class PaymentAdmin(admin.ModelAdmin):
-    list_display = ('gmail', 'matric', 'amount', 'status')  # Ensure these fields are valid
+    list_display = ('gmail', 'matric', 'amount', 'amount_ngn', 'status')  # Ensure these fields are valid
     search_fields = ('gmail', 'matric')
     list_filter = ('status',)
 

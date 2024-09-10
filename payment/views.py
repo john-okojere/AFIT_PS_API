@@ -156,7 +156,7 @@ class FeeAmountView(generics.GenericAPIView):
         fee_amount_ngn = level.fee_amount  # Assuming fee_amount is in NGN
         fee_amount_eth = ngn_to_eth(fee_amount_ngn)
 
-        return Response({'amount_in_eth': fee_amount_eth})
+        return Response({'amount_in_eth': fee_amount_eth, 'amount_in_ngn':fee_amount_ngn})
     
 
 class LoginView(APIView):
